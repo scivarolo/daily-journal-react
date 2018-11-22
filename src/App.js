@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import DataManager from './modules/Data'
+
+import EntriesList from "./components/entries/EntriesList";
 class App extends Component {
 
-  state = {}
+  state = {
+    entries: []
+  }
 
   componentDidMount() {
     // get some data
+    let newState = {}
+
+    DataManager.getEntries()
+    .then(entries => newState.entries = entries)
+    .then(() => this.setState(newState))
+
   }
 
   render() {
@@ -20,7 +30,7 @@ class App extends Component {
               <section id="mood-filter" className="mood-filter"></section>
             </div>
           </div>
-          <section id="entries" className="entries-wrapper"></section>
+          <EntriesList entries={this.state.entries} />
         </section>
       </section>
     );
