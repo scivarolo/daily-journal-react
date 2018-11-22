@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import DataManager from './modules/Data'
-
+import Form from './components/form/Form'
 import EntriesList from "./components/entries/EntriesList";
+
 class App extends Component {
 
   state = {
-    entries: []
+    entries: [],
+    moods: []
   }
 
   componentDidMount() {
@@ -29,6 +31,11 @@ class App extends Component {
     })
     .then(entries => newState.entries = entries)
     .then(() => this.setState(newState))
+
+    DataManager.getMoods()
+    .then(moods => {
+      this.setState({moods: moods})
+    })
   }
 
   render() {
@@ -39,7 +46,7 @@ class App extends Component {
         <section className="grid-wrapper">
           <div className="left-column">
             <div className="sticky-wrapper">
-              <section className="form-wrapper"></section>
+              <Form moods={this.state.moods} />
               <section id="mood-filter" className="mood-filter"></section>
             </div>
           </div>
