@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Daily Journal",
+  "name": "NSS Daily Journal Built with React",
   "icons": [
     {
       "src": "favicon.ico",

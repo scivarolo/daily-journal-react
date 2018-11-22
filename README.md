@@ -1,3 +1,6 @@
+# NSS Daily Journal (React)
+I took the daily journal I built while learning vanilla Javascript and turned it into a Reat app!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
