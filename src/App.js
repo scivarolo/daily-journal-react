@@ -13,9 +13,22 @@ class App extends Component {
     let newState = {}
 
     DataManager.getEntries()
+    .then(entries => {
+      let conceptPromises = []
+      // set up Promises to get concepts for each entry
+      entries.forEach(entry => {
+        conceptPromises.push(
+          DataManager.getEntryConcepts(entry.id)
+          .then(concepts => {
+            entry.concepts = concepts
+            return entry
+          })
+        )
+      })
+      return Promise.all(conceptPromises)
+    })
     .then(entries => newState.entries = entries)
     .then(() => this.setState(newState))
-
   }
 
   render() {

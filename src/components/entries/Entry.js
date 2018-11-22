@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 
 class Entry extends Component {
 
-  state = {
-    concepts: []
-  }
-
-  componentDidMount() {
-    // TODO: Get concepts from database and save in state
-  }
-
   render() {
     let entry = this.props.entry
     return (
@@ -18,7 +10,13 @@ class Entry extends Component {
           <h2 className="entry__title">{entry.title}</h2>
           <h3 className="entry__date">{entry.date}</h3>
           <div className="entry__concepts">
-            <span className="concept">Fetch Concepts</span>
+            {
+              entry.concepts.map(concept => {
+                return (
+                  <span className="concept" key={concept.conceptId}>{concept.concept.label}</span>
+                )
+              })
+            }
           </div>
         </header>
         <div className="entry__content">
@@ -30,6 +28,7 @@ class Entry extends Component {
       </article>
     )
   }
+
 }
 
 export default Entry
