@@ -1,0 +1,233 @@
+{
+  "entries": [
+    {
+      "date": "10/18/2018",
+      "title": "Setting up a JSON Server",
+      "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
+      "moodId": 1,
+      "id": 1
+    },
+    {
+      "date": "10/18/2018",
+      "title": "Broken Promises",
+      "content": "We learned how to build Promise chains to fetch data and wait for it to arrive before moving on to the next step with a chain of then() statements. Make sure you return your data with your Promise!",
+      "moodId": 6,
+      "id": 2
+    },
+    {
+      "date": "10/18/2018",
+      "title": "Setting up a JSON Server",
+      "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
+      "moodId": 5,
+      "id": 3
+    },
+    {
+      "title": "POSTing to the Database",
+      "content": "I learned how to POST to the database. Only took a million tries!",
+      "date": "2018-10-31",
+      "moodId": 2,
+      "id": 4
+    },
+    {
+      "title": "Data Validation",
+      "content": "Testing out if my form validation for empty fields works.",
+      "date": "2018-11-01",
+      "moodId": 2,
+      "id": 5
+    },
+    {
+      "title": "Test a tweak",
+      "content": "tdsafjdsakl",
+      "date": "2018-11-03",
+      "moodId": 1,
+      "id": 6
+    },
+    {
+      "title": "Post then Get",
+      "content": "Lets see if I can post and get in a single method.",
+      "date": "2018-11-03",
+      "moodId": 1,
+      "id": 7
+    },
+    {
+      "title": "POST then GET",
+      "content": "In a single method.",
+      "date": "2018-11-03",
+      "moodId": 1,
+      "id": 8
+    },
+    {
+      "title": "Modules!",
+      "content": "The Daily Journal now uses Browserify and all of the javascript is modularized. I can probably do some more work to clean them up. They got messy the last few rounds.",
+      "date": "2018-11-07",
+      "moodId": 5,
+      "id": 9
+    },
+    {
+      "title": "fdjskafld;afjkda;",
+      "content": "fjdkslaf;djkaf;dsfkajf;",
+      "date": "2018-11-16",
+      "moodId": "4",
+      "id": 10
+    }
+  ],
+  "moods": [
+    {
+      "label": "Happy",
+      "id": 1
+    },
+    {
+      "label": "Fine",
+      "id": 2
+    },
+    {
+      "label": "Angry",
+      "id": 3
+    },
+    {
+      "label": "Frustrated",
+      "id": 4
+    },
+    {
+      "label": "Optimistic",
+      "id": 5
+    },
+    {
+      "label": "Overwhelmed",
+      "id": 6
+    }
+  ],
+  "concepts": [
+    {
+      "id": 1,
+      "label": "JSON Server"
+    },
+    {
+      "id": 2,
+      "label": "HTTP Requests"
+    },
+    {
+      "id": 3,
+      "label": "Promises"
+    },
+    {
+      "id": 4,
+      "label": "Fetch"
+    },
+    {
+      "id": 5,
+      "label": "API"
+    },
+    {
+      "id": 6,
+      "label": "POST"
+    },
+    {
+      "id": 7,
+      "label": "Form Validation"
+    },
+    {
+      "id": 8,
+      "label": "Methods"
+    },
+    {
+      "id": 9,
+      "label": "Browserify"
+    },
+    {
+      "id": 10,
+      "label": "Modules"
+    },
+    {
+      "label": "Joiner Tables",
+      "id": 11
+    }
+  ],
+  "entry_concepts": [
+    {
+      "entryId": 1,
+      "conceptId": 1,
+      "id": 1
+    },
+    {
+      "entryId": 1,
+      "conceptId": 2,
+      "id": 2
+    },
+    {
+      "entryId": 2,
+      "conceptId": 3,
+      "id": 3
+    },
+    {
+      "entryId": 2,
+      "conceptId": 4,
+      "id": 4
+    },
+    {
+      "entryId": 2,
+      "conceptId": 5,
+      "id": 5
+    },
+    {
+      "entryId": 3,
+      "conceptId": 1,
+      "id": 6
+    },
+    {
+      "entryId": 3,
+      "conceptId": 2,
+      "id": 7
+    },
+    {
+      "entryId": 4,
+      "conceptId": 6,
+      "id": 8
+    },
+    {
+      "entryId": 5,
+      "conceptId": 7,
+      "id": 9
+    },
+    {
+      "entryId": 6,
+      "conceptId": 4,
+      "id": 10
+    },
+    {
+      "entryId": 7,
+      "conceptId": 8,
+      "id": 11
+    },
+    {
+      "entryId": 7,
+      "conceptId": 4,
+      "id": 12
+    },
+    {
+      "entryId": 8,
+      "conceptId": 4,
+      "id": 13
+    },
+    {
+      "entryId": 8,
+      "conceptId": 8,
+      "id": 14
+    },
+    {
+      "entryId": 8,
+      "conceptId": 6,
+      "id": 15
+    },
+    {
+      "entryId": 9,
+      "conceptId": 9,
+      "id": 16
+    },
+    {
+      "entryId": 9,
+      "conceptId": 10,
+      "id": 17
+    }
+  ]
+}
