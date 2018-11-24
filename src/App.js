@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import DataManager from './modules/Data'
 import Form from './components/form/Form'
-import EntriesList from "./components/entries/EntriesList";
-
+import MoodFilter from './components/entries/MoodFilter'
+import EntriesList from "./components/entries/EntriesList"
+import Filter from "./modules/Filter"
 class App extends Component {
 
   state = {
@@ -15,20 +16,6 @@ class App extends Component {
     let newState = {}
 
     DataManager.getEntries()
-    .then(entries => {
-      let conceptPromises = []
-      // set up Promises to get concepts for each entry
-      entries.forEach(entry => {
-        conceptPromises.push(
-          DataManager.getEntryConcepts(entry.id)
-          .then(concepts => {
-            entry.concepts = concepts
-            return entry
-          })
-        )
-      })
-      return Promise.all(conceptPromises)
-    })
     .then(entries => newState.entries = entries)
     .then(() => this.setState(newState))
 
@@ -36,6 +23,11 @@ class App extends Component {
     .then(moods => {
       this.setState({moods: moods})
     })
+  }
+
+  filterEntries = (e) => {
+    return Filter(e)
+    .then(entries => this.setState({entries: entries}))
   }
 
   render() {
@@ -47,6 +39,7 @@ class App extends Component {
           <div className="left-column">
             <div className="sticky-wrapper">
               <Form moods={this.state.moods} />
+              <MoodFilter moods={this.state.moods} filterEntries={this.filterEntries} />
               <section id="mood-filter" className="mood-filter"></section>
             </div>
           </div>

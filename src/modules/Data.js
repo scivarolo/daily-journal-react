@@ -19,6 +19,20 @@ class DataManager {
   getEntries() {
     return fetch(this.urls.entries)
       .then(response => response.json())
+      .then(entries => {
+        let conceptPromises = []
+        // set up Promises to get concepts for each entry
+        entries.forEach(entry => {
+          conceptPromises.push(
+            this.getEntryConcepts(entry.id)
+            .then(concepts => {
+              entry.concepts = concepts
+              return entry
+            })
+          )
+        })
+        return Promise.all(conceptPromises)
+      })
   }
 
   saveData(entry, resource) {
