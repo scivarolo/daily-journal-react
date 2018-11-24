@@ -64,11 +64,25 @@
       "id": 9
     },
     {
-      "title": "fdjskafld;afjkda;",
-      "content": "fjdkslaf;djkaf;dsfkajf;",
-      "date": "2018-11-16",
+      "title": "Promises",
+      "content": "Hopefully the concepts load this time. Return statements are everywhere!!",
+      "date": "2018-11-28",
       "moodId": "4",
-      "id": 10
+      "id": 12
+    },
+    {
+      "title": "Promise.all() saves the day",
+      "content": "Now that I've collected all the concept saving into a Promise.all they will actually load with the new entry without a refresh!",
+      "date": "2018-11-29",
+      "moodId": "5",
+      "id": 13
+    },
+    {
+      "title": "React is crazy",
+      "content": "It's so refreshing not having to deal with event listeners like we did with vanilla Javascript.",
+      "date": "0008-11-29",
+      "moodId": "1",
+      "id": 14
     }
   ],
   "moods": [
@@ -141,6 +155,22 @@
     {
       "label": "Joiner Tables",
       "id": 11
+    },
+    {
+      "label": "react",
+      "id": 12
+    },
+    {
+      "label": "state",
+      "id": 13
+    },
+    {
+      "label": "props",
+      "id": 14
+    },
+    {
+      "label": "Promise.all",
+      "id": 15
     }
   ],
   "entry_concepts": [
@@ -228,6 +258,51 @@
       "entryId": 9,
       "conceptId": 10,
       "id": 17
+    },
+    {
+      "entryId": 12,
+      "conceptId": 12,
+      "id": 20
+    },
+    {
+      "entryId": 12,
+      "conceptId": 13,
+      "id": 21
+    },
+    {
+      "entryId": 12,
+      "conceptId": 14,
+      "id": 22
+    },
+    {
+      "entryId": 13,
+      "conceptId": 3,
+      "id": 23
+    },
+    {
+      "entryId": 13,
+      "conceptId": 14,
+      "id": 24
+    },
+    {
+      "entryId": 13,
+      "conceptId": 12,
+      "id": 25
+    },
+    {
+      "entryId": 13,
+      "conceptId": 13,
+      "id": 26
+    },
+    {
+      "entryId": 13,
+      "conceptId": 15,
+      "id": 27
+    },
+    {
+      "entryId": 14,
+      "conceptId": 12,
+      "id": 28
     }
   ]
 }

@@ -5,7 +5,7 @@ class Form extends Component {
   render() {
     return (
       <section className="form-wrapper">
-        <form className="entry-form">
+        <form className="entry-form" onSubmit={(e) => this.props.handleSubmit(e)}>
           <fieldset>
             <div className="field-wrapper">
               <label htmlFor="entryTitle">Entry Title</label>
@@ -30,7 +30,7 @@ class Form extends Component {
                   {
                     this.props.moods.map(mood => {
                       return (
-                        <option value={mood.label} key={`mood-${mood.id}`} id={`mood-${mood.id}`}>{mood.label}</option>
+                        <option key={`mood-${mood.id}`} id={`mood-${mood.id}`} value={mood.id}>{mood.label}</option>
                       )
                     })
                   }

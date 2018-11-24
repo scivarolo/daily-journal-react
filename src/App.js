@@ -4,6 +4,7 @@ import Form from './components/form/Form'
 import MoodFilter from './components/entries/MoodFilter'
 import EntriesList from "./components/entries/EntriesList"
 import Filter from "./modules/Filter"
+import SubmitEntry from './modules/Submit';
 class App extends Component {
 
   state = {
@@ -30,6 +31,11 @@ class App extends Component {
     .then(entries => this.setState({entries: entries}))
   }
 
+  handleSubmit = (e) => {
+    return SubmitEntry(e)
+    .then(entries => this.setState({entries: entries}))
+  }
+
   render() {
     return (
       <section className="app-wrapper">
@@ -38,7 +44,7 @@ class App extends Component {
         <section className="grid-wrapper">
           <div className="left-column">
             <div className="sticky-wrapper">
-              <Form moods={this.state.moods} />
+              <Form moods={this.state.moods} handleSubmit={this.handleSubmit}/>
               <MoodFilter moods={this.state.moods} filterEntries={this.filterEntries} />
               <section id="mood-filter" className="mood-filter"></section>
             </div>

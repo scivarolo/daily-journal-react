@@ -80,8 +80,10 @@ class DataManager {
   }
 
   saveConcepts(conceptsArray, entryId) {
-    this.getConcepts()
+    return this.getConcepts()
     .then(dbConcepts => {
+      // Set up an array for promises
+      let promises = []
       conceptsArray.forEach(concept => {
         //check if concept already exists
         let existingConcept = dbConcepts.find(dbConcept => concept.toLowerCase() === dbConcept.label.toLowerCase())
@@ -91,22 +93,26 @@ class DataManager {
             entryId: entryId,
             conceptId: existingConcept.id
           }
-          return this.saveData(entry_conceptsObj, "entry_concepts")
+          //save the promise
+          promises.push(this.saveData(entry_conceptsObj, "entry_concepts"))
         } else {
           // if not, create an entry in concepts then create a new entry in entry_concepts
           let object = {
             label: concept
           }
-          this.saveData(object, "concepts")
+          promises.push(this.saveData(object, "concepts")
           .then(newConcept => {
             let entry_conceptsObj = {
               entryId: entryId,
               conceptId: newConcept.id
             }
+            //save the promise
             return this.saveData(entry_conceptsObj, "entry_concepts")
-          })
+          }))
         }
       })
+      // save all of the concepts from the new entry
+      return Promise.all(promises)
     })
   }
 
